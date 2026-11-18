@@ -1,0 +1,12 @@
+# SigNET (`signet-firewall`) — LLM Context Specification
+
+> Pure-Rust (`#![forbid(unsafe_code)]`, 2024 Edition) cryptographic capability firewall, anti-rug-pull JSON-RPC 2.0 stdio proxy, and append-only `BLAKE3` + `Ed25519` Merkle transparency logger for MCP servers and autonomous AI coding agents.
+
+## Core CLI Subcommands
+- `signet init`: Generates an `Ed25519` authority keypair encrypted under `XChaCha20-Poly1305` (`Argon2id` + `HKDF-SHA256`) and initializes `signet.db`.
+- `signet token mint | attenuate | inspect`: Mints, attenuates (narrows), or inspects `sig1.<base64url-claims>.<hex-ed25519-sig>` capability tokens.
+- `signet pin list`: Lists pinned `BLAKE3` MCP tool schema digests.
+- `signet proxy --token <tok> -- <cmd...>`: Wraps any child stdio MCP server in a real-time JSON-RPC 2.0 firewall.
+- `signet verify --token <tok> --tool <name> --args <json>`: Single-shot capability evaluator and Merkle logger for `PreToolUse` agent hooks.
+- `signet audit [--json]`: Verifies every `BLAKE3` hash link and `Ed25519` signature across the SQLite WAL transparency log.
+- `signet tui`: Ratatui v0.30+ 3-pane Firewall & Merkle Chain Inspector.
