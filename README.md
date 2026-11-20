@@ -5,7 +5,7 @@
 [![Rust: 2024 Edition](https://img.shields.io/badge/Rust-2024_Edition-orange.svg)](Cargo.toml)
 [![Safety: #![forbid(unsafe_code)]](https://img.shields.io/badge/unsafe-forbid-success.svg)](src/lib.rs)
 
-**Sig**[**NET**] (*Signal + NET*) is a pure-Rust (`#![forbid(unsafe_code)]`), sub-millisecond cryptographic capability firewall, cancel-safe JSON-RPC 2.0 stdio proxy, anti-rug-pull MCP tool schema pinner, and append-only `BLAKE3` + `Ed25519` Merkle transparency logger for **Model Context Protocol (MCP)** servers and autonomous AI coding agents.
+**Sig**[**NET**] (*Signal + NET*) is a pure-Rust (`#![forbid(unsafe_code)]`) firewall for **Model Context Protocol (MCP)** servers and AI coding agents: it blocks unauthorized tool calls, stops mid-session tool rug-pulls, and locks every action into a tamper-proof audit log.
 
 ---
 
